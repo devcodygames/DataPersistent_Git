@@ -16,6 +16,7 @@ public class MainUIHandler : MonoBehaviour
     }
     public void BackToStartMenu()
     {
+        GameManager.Instance.SavePlayerData();
         SceneManager.LoadScene(0);
     }
 }

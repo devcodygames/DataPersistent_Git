@@ -53,4 +53,12 @@ public class MenuUIHandler : MonoBehaviour
         SceneManager.LoadScene(1);
         Debug.Log("Loading scene");
     }
+    public void Quit()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.ExitPlaymode();
+#else
+    Application.Quit();
+#endif
+    }
 }
